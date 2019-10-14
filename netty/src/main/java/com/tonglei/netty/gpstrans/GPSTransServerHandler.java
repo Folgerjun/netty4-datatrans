@@ -21,7 +21,7 @@ public class GPSTransServerHandler extends ChannelInboundHandlerAdapter {
 		// System.out.println("ipNum: " + ipNum);
 		ByteBuf in = (ByteBuf) msg;
 		String message = in.toString(CharsetUtil.UTF_8);
-		// System.out.println("client message: " + message);
+		System.out.println("client message: " + message);
 		if (message.startsWith("$")) {
 			message = message.replace("$", "#");
 			if (!GPSTransConsts.IP_NAME.containsKey(ipNum)) {

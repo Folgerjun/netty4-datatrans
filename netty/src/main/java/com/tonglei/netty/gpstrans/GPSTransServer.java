@@ -28,7 +28,6 @@ public class GPSTransServer {
 			ChannelFuture f = b.bind(port).sync();
 			System.out.println("bind: " + port);
 			f.channel().closeFuture().sync();
-
 		} finally {
 			workerGroup.shutdownGracefully();
 			bossGroup.shutdownGracefully();

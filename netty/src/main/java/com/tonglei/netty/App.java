@@ -31,7 +31,7 @@ public class App {
 		try {
 			new GPSTransServer().run(Integer.parseInt(GPSTransConsts.SERVER_PORT));
 		} catch (NumberFormatException | InterruptedException e1) {
-			System.out.println("server start err!");
+			System.err.println("server start err!");
 			e1.printStackTrace();
 		}
 
